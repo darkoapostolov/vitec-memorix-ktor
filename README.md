@@ -2,16 +2,22 @@
 
 ## Getting Started
 
+1. Firstly you are going to convert the gradlew to Unix format with the following command in a bash terminal:
+
+```bash
+   dos2unix gradlew
+```
+
 To start the application, follow these steps:
 
-1. **Build the Docker image:**
+2. **Build the Docker image:**
 
    Run the following command to build the Docker image:
 
    ```bash
    docker-compose build
 
-2. **Run the Docker container:**
+3. **Run the Docker container:**
 
    After creating the image, run the Docker container to start both the database and the application.
    You can use the command:
@@ -20,7 +26,7 @@ To start the application, follow these steps:
    docker-compose up
    ```
 
-3. **Updating docker image for new changes:**
+4. **Updating docker image for new changes:**
 
    After upating the project there might be an issue using the new changes with docker, run the following commands to resolve the issue:
    
@@ -29,6 +35,11 @@ To start the application, follow these steps:
    docker-compose build --no-cache
    docker-compose up
    ```
+5. **If there is an issue staring the docker beacuse of db connection run:**
+
+```bash
+   docker-compose up -d db
+   ```   
    
 ## Available API Endpoints
 
