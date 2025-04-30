@@ -9,7 +9,7 @@ To start the application, follow these steps:
    Run the following command to build the Docker image:
 
    ```bash
-   docker-compose build.
+   docker-compose build
 
 2. **Run the Docker container:**
 
