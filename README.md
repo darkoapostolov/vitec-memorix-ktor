@@ -25,8 +25,18 @@ To start the application, follow these steps:
    ```bash
    docker-compose up
    ```
+4. **If there is an issue staring the docker beacuse of db connection run:**
 
-4. **Updating docker image for new changes:**
+```bash
+   docker-compose up -d db
+   ```   
+Then you can run 
+   ```bash
+   docker-compose up
+   ```   
+And the app will function correctly
+
+5. **Updating docker image for new changes:**
 
    After upating the project there might be an issue using the new changes with docker, run the following commands to resolve the issue:
    
@@ -35,12 +45,6 @@ To start the application, follow these steps:
    docker-compose build --no-cache
    docker-compose up
    ```
-5. **If there is an issue staring the docker beacuse of db connection run:**
-
-```bash
-   docker-compose up -d db
-   ```   
-   
 ## Available API Endpoints
 
 Once the app is running, the following two API calls will be available:
