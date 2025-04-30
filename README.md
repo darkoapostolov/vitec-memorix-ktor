@@ -9,11 +9,16 @@ To start the application, follow these steps:
    Run the following command to build the Docker image:
 
    ```bash
-   docker build -t my-spring-kotlin-app .
+   docker-compose build.
 
 2. **Run the Docker container:**
 
-   After creating the image, run the Docker container to start both the database and the application. Ensure the profile is set to `docker`.
+   After creating the image, run the Docker container to start both the database and the application.
+   You can use the command:
+
+   ```bash
+   docker-compose up
+   ```
 
 3. **Updating docker image for new changes:**
 
@@ -29,7 +34,7 @@ To start the application, follow these steps:
 
 Once the app is running, the following two API calls will be available:
 
-### 1. `GET http://localhost:8080/users?query=Name&limit=10`
+### 1. `GET http://0.0.0.0:8080/users?query=Name&limit=10`
 
 #### Output:
 
@@ -53,7 +58,7 @@ Once the app is running, the following two API calls will be available:
     "total": 1
   }
 ```
-### 2. `POST http://localhost:8080/users`
+### 2. `POST http://0.0.0.0:8080/users`
 
   #### Body:
 
